@@ -10,7 +10,7 @@ services:
     ports:
       - "${CLIENT_GATEWAY_PORT}:3000"
     volumes:
-      - ./client-gateway:/src:urs/src/app/src
+      - ./client-gateway/src:urs/src/app/src
     command: npm run start:dev
     environment:
       - PORT=3000
@@ -18,7 +18,7 @@ services:
   products-ms:
     build: ./products-ms
     volumes:
-      - ./products-ms:/src:urs/src/app/src
+      - ./products-ms/src:urs/src/app/src
     command: npm run start:dev
     environment:
       - PORT=3001
